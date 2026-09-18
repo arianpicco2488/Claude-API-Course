@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message. The log format is: '[TIMESTAMP] [LOG_LEVEL] message content'",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly capture three groups: timestamp (ISO 8601 format), log level (DEBUG, INFO, WARNING, ERROR), and the remaining message text. Should handle variable-length messages."
+  },
+  {
+    "task": "Create a Python function that takes an AWS S3 object key path (e.g., 'my-bucket/logs/2024/01/15/app.log') and returns a dictionary with extracted components: bucket, folder structure, and filename.",
+    "format": "python",
+    "solution_criteria": "Function should return a dictionary with keys: 'bucket', 'path_components' (list), and 'filename'. Should handle edge cases like trailing slashes and single-level keys."
+  },
+  {
+    "task": "Generate a JSON configuration object for an AWS Lambda environment that sets variables for database connection (host, port, username, encrypted password) and logging level, with sensible defaults.",
+    "format": "json",
+    "solution_criteria": "JSON should include Environment object with Variables nested inside, containing all required database parameters with example values, and a logging_level set to 'INFO'. Should follow AWS Lambda environment variable structure."
+  }
+]
